@@ -13,7 +13,10 @@ KMETA = "kernel-meta"
 # directories that may be missing"
 SRC_URI = "git://github.com/${FORK}/linux.git;name=machine;protocol=https;branch=${BRANCH} \
            git://git.yoctoproject.org/yocto-kernel-cache;type=kmeta;name=meta;branch=master;destsuffix=${KMETA} \
+	   file://kubernetes.cfg \
            "
+
+
 
 SRC_URI:append:mangopi-mq-pro = " \
 	       	   file://mangopi-mq-pro.cfg \
